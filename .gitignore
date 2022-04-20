@@ -1,0 +1,7 @@
+# Default ignored files
+.github/
+.idea/
+.iml/
+target/
+build/
+
