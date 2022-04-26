@@ -1,11 +1,15 @@
 
 
-command to run tests: pytest .
+Command to run tests: mvn clean test
 
-Some info about test framework e.g.
+This is API tests that verification correct work of the test resource.
 
 Structure of test framework:
 
-    tests shall be in TESTS folder
-    All the configuration are firstly defined in config/config class
+    tests shall be in SRC/TESTS folder
+    All the configuration are firstly defined in SRC/MAIN folder
+    All the property files are in SRC/RESOURCES folder
+
+
+
 
