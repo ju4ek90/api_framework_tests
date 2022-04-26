@@ -8,8 +8,8 @@ public class LoginTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Config.class);
 
-    @Test(description = "Verify thst the token will be returned")
-    public void testLoginSuccesful() throws Exception{
+    @Test(description = "Verify that the token will be returned")
+    public void testLoginSuccessful() {
 
         try {
             assert !ApiClient.sendLoginToGetToken().isEmpty();
