@@ -36,7 +36,7 @@ public class ApiClient {
 
         //Create request
         Request request = BaseRequests
-                .buildRequestWithHeaders(CommonUtils.buildUrl(Urls.ROOT_FOLDER), "x-token", token);
+                .buildRequestWithHeaders(CommonUtils.buildUrl(Urls.FILES_V2 + "?breadcrumbs=1&offset=0&limit=1000&_=1622700773180"), "x-token", token);
 
         Response response = null;
         try {
@@ -53,7 +53,7 @@ public class ApiClient {
 
         //Create request
         Request request = BaseRequests
-                .buildRequestWithHeaders(CommonUtils.buildUrl(Urls.SPECIFIC_FOLDER), "x-token", token);
+                .buildRequestWithHeaders(CommonUtils.buildUrl(Urls.FILES_V2 + "?breadcrumbs=1&offset=0&limit=1000&folder_id=84c966d5-8dce-429d-8f92-44d5e28b1581&_=1622700773180"), "x-token", token);
         Response response = null;
         try {
             response = client.newCall(request).execute();
@@ -68,7 +68,7 @@ public class ApiClient {
 
         //Create request
         Request request = BaseRequests
-                .buildRequestWithHeaders(CommonUtils.buildUrl(Urls.FILES_COUNT_URL), "x-token", token);
+                .buildRequestWithHeaders(CommonUtils.buildUrl(Urls.FILES_COUNT_URL + "?folder_id=84c966d5-8dce-429d-8f92-44d5e28b1581&_=1622700773179"), "x-token", token);
 
         Response response = null;
         try {
@@ -84,7 +84,8 @@ public class ApiClient {
 
         //Create request
         Request request = BaseRequests
-                .buildRequestWithHeaders(CommonUtils.buildUrl(Urls.FILES_RESULT_URL_GET_RUN), "x-token", token);
+                .buildRequestWithHeaders(CommonUtils.buildUrl(String.format(Urls.filesRunTemplate, "7f4c7326-0a4e-4b56-a8d0-8ce002191672")
+                        + "?_=1622700773181"), "x-token", token);
 
         Response response = null;
         try {
@@ -99,7 +100,8 @@ public class ApiClient {
     public static String filesResultsGetAnalysesRequest() throws IOException {
         //Create request
         Request request = BaseRequests
-                .buildRequestWithHeaders(CommonUtils.buildUrl(Urls.FILES_RESULT_URL_GET_ANALYSES), "x-token", token);
+                .buildRequestWithHeaders(CommonUtils.buildUrl(String.format(Urls.filesAnalysesTemplate, "437ef8e4-b595-4fd8-a2f5-64221831e925")
+                        + "?filter=total&_=1622700773184"), "x-token", token);
 
         Response response = null;
         try {
@@ -115,7 +117,8 @@ public class ApiClient {
 
         //Create request
         Request request = BaseRequests
-                .buildRequestWithHeaders(CommonUtils.buildUrl(Urls.FILES_RESULT_URL_GET_ARTIFACTS), "x-token", token);
+                .buildRequestWithHeaders(CommonUtils.buildUrl(String.format(Urls.filesArtifactsTemplate, "437ef8e4-b595-4fd8-a2f5-64221831e925")
+                        + "?_=1622700773185"), "x-token", token);
 
         Response response = null;
         try {
