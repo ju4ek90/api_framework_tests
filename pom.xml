@@ -13,10 +13,24 @@
         <maven.compiler.target>11</maven.compiler.target>
         <okhttp.version>2.7.5</okhttp.version>
         <slf4j.version>1.7.25</slf4j.version>
+        <selenuim.version>3.141.59</selenuim.version>
+        <selenide.version>5.23.3</selenide.version>
         <wiremock-standalone>2.27.2</wiremock-standalone>
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>${selenide.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenuim.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>

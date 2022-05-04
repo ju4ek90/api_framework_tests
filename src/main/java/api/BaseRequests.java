@@ -10,6 +10,7 @@ public class BaseRequests {
     public static Request buildRequest(HttpUrl url) {
         return new Request.Builder()
                 .url(url)
+                .addHeader("x-token", ApiClient.token)
                 .build();
     }
 
