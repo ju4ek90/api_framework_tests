@@ -1,19 +1,13 @@
-import api.ApiClient;
-import conf.Config;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import ui.CosmosIdUi;
-import ui.page_objeckts.LoginPage;
+import applications.ui.CosmosIdUi;
+import applications.page_objects.LoginPage;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-import static ui.Utils.webDriver;
+import static applications.ui.Utils.webDriver;
 
 public class UiTests {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(Config.class);
 
 
     @BeforeClass
@@ -26,7 +20,7 @@ public class UiTests {
     @Test(description = "Test user can not login with wrong creds")
     public void testLoginFailed() {
 
-        assert LoginPage.isLoginFaild("kjhk@kjhk.com", "hkjljk");
+        assert LoginPage.isLoginFailed("kjhk@kjhk.com", "hkjljk");
 
     }
 

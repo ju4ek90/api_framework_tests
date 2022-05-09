@@ -1,13 +1,14 @@
-package ui;
+package applications.ui;
 
-import com.codeborne.selenide.Browsers;
 import com.codeborne.selenide.Configuration;
+import conf.Config;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class Utils {
 
     public static void webDriver() {
-        Configuration.browser = Browsers.CHROME;
+
+        Configuration.browser = Config.BROWSER.getName();
         Configuration.timeout = 70000;
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);

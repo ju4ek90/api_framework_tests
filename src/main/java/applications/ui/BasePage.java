@@ -1,6 +1,4 @@
-package ui;
-
-import ui.page_objeckts.LoginPage;
+package applications.ui;
 
 import static com.codeborne.selenide.Selenide.$x;
 

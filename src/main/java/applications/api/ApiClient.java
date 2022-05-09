@@ -1,4 +1,4 @@
-package api;
+package applications.api;
 
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;

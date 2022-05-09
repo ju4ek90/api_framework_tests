@@ -16,7 +16,9 @@ public enum Config {
     LOGIN_TOKEN("login.token"),
     AUTH("auth"),
 
-    ENV("app");
+    ENV("app"),
+
+    BROWSER("Chrome");
 
     static Properties properties = new Properties();
     private static final Logger LOGGER = LoggerFactory.getLogger(Config.class);

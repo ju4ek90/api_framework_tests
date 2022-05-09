@@ -1,4 +1,4 @@
-package ui;
+package applications.ui;
 
 public class Urls {
 

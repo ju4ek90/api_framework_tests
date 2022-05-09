@@ -1,4 +1,4 @@
-import api.ApiClient;
+import applications.api.ApiClient;
 import conf.Config;
 import org.testng.annotations.Test;
 import org.slf4j.Logger;
