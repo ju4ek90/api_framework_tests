@@ -1,4 +1,4 @@
-package applications.page_objects;
+package page_objects;
 
 import applications.ui.CosmosIdUi;
 import com.codeborne.selenide.Condition;

@@ -1,6 +1,6 @@
 package applications.ui;
 
-import applications.page_objects.LoginPage;
+import page_objects.LoginPage;
 import conf.Config;
 
 import static com.codeborne.selenide.Selenide.open;
