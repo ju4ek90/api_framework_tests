@@ -1,19 +1,17 @@
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import applications.ui.CosmosIdUi;
 import page_objects.LoginPage;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-import static applications.ui.Utils.webDriver;
+import static applications.ui.WebBrowsersFactory.initWebDriver;
 
 public class UiTests {
 
 
     @BeforeClass
     public void setUp() {
-        webDriver();
-        CosmosIdUi.initPageObjects();
+        initWebDriver();
     }
 
 

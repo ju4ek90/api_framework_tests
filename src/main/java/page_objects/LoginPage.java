@@ -2,11 +2,10 @@ package page_objects;
 
 import applications.ui.CosmosIdUi;
 import com.codeborne.selenide.Condition;
-import applications.ui.BasePage;
 
 import static com.codeborne.selenide.Selenide.$x;
 
-public class LoginPage extends BasePage {
+public class LoginPage extends CosmosIdUi {
 
     private static final String USERNAME_FIELD = "//*[@id='email']";
     private static final String PASS_FIELD = "//*[@id='password']";
@@ -16,10 +15,10 @@ public class LoginPage extends BasePage {
 
     public static void login(String login, String pass) {
         CosmosIdUi.openLoginPage();
-        BasePage.clickButton(FIRST_MESSAGE);
-        BasePage.inputText(USERNAME_FIELD, login);
-        BasePage.inputText(PASS_FIELD, pass);
-        BasePage.clickButton(LOGIN_BTN);
+        CosmosIdUi.clickButton(FIRST_MESSAGE);
+        CosmosIdUi.inputText(USERNAME_FIELD, login);
+        CosmosIdUi.inputText(PASS_FIELD, pass);
+        CosmosIdUi.clickButton(LOGIN_BTN);
     }
 
     public static boolean isLoginFailed(String login, String pass) {

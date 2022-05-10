@@ -4,10 +4,10 @@ import com.codeborne.selenide.Configuration;
 import conf.Config;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-public class Utils {
+public class WebBrowsersFactory {
 
     public static int PAGE_LOAD_TIMEOUT = 200;
-    public static void webDriver() {
+    public static void initWebDriver() {
 
         Configuration.browser = Config.BROWSER.getName();
         Configuration.timeout = 70000;

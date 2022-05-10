@@ -18,7 +18,7 @@ public enum Config {
 
     ENV("app"),
 
-    BROWSER("Chrome");
+    BROWSER("Firefox");
 
     static Properties properties = new Properties();
     private static final Logger LOGGER = LoggerFactory.getLogger(Config.class);
