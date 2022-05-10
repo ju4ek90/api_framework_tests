@@ -6,7 +6,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class WebBrowsersFactory {
 
-    public static int PAGE_LOAD_TIMEOUT = 200;
     public static void initWebDriver() {
 
         Configuration.browser = Config.BROWSER.getName();
